@@ -1,0 +1,13 @@
+/.editorconfig
+
+/.gitattributes
+
+/.gitignore
+
+/.idea/
+
+/node_modules/
+
+/docker-compose.yml
+
+/README.md

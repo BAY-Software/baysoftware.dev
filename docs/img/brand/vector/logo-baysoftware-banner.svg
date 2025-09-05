@@ -1,0 +1,1153 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1536"
+   height="1024"
+   viewBox="0 0 1536 1024"
+   role="img"
+   aria-labelledby="t d"
+   version="1.1"
+   id="svg7"
+   sodipodi:docname="logo-baysoftware-banner.svg"
+   inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
+   xml:space="preserve"
+   inkscape:export-filename="logo-baysoftware-banner.png"
+   inkscape:export-xdpi="84.375"
+   inkscape:export-ydpi="84.375"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"><sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showguides="true"
+     showgrid="true"
+     inkscape:zoom="0.64"
+     inkscape:cx="771.875"
+     inkscape:cy="476.5625"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer2"><inkscape:grid
+       id="grid11"
+       units="px"
+       originx="0"
+       originy="0"
+       spacingx="1"
+       spacingy="1"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14902"
+       empspacing="5"
+       enabled="true"
+       visible="true" /></sodipodi:namedview><title
+     id="t">BAY $oftware.dev LinkedIn cover</title><desc
+     id="d">Dark code-themed cover with BAY $oftware.dev text. Based on user's provided background. Font sizes and colors match the original; only a space inserted between BAY and $.</desc><defs
+     id="defs1"><rect
+       x="718.06851"
+       y="152.04509"
+       width="38.448539"
+       height="213.85204"
+       id="rect23" /><rect
+       x="220"
+       y="740"
+       width="420"
+       height="100"
+       id="rect14" /><rect
+       x="220"
+       y="740"
+       width="380"
+       height="120"
+       id="rect13" /><style
+       id="style1">
+      @font-face {
+        font-family: &quot;DejaVuSans&quot;;
+        src: local(&quot;DejaVu Sans&quot;), local(&quot;DejaVuSans&quot;);
+      }
+      .brand { font: 700 96px/1 &quot;Inter&quot;, &quot;Segoe UI&quot;, &quot;DejaVuSans&quot;, system-ui, sans-serif; letter-spacing: 0.5px; }
+      .tag   { font: 500 56px/1 &quot;Inter&quot;, &quot;Segoe UI&quot;, &quot;DejaVuSans&quot;, system-ui, sans-serif; }
+    
+/* VS Code Dark+ token colors on dark-navy bg */
+.code{ white-space:pre; fill:#D4D4D4; }   /* default text */
+.tok-kw{   fill:#C586C0; }  /* keywords */
+.tok-type{ fill:#4EC9B0; }  /* types/classes */
+.tok-fn{   fill:#DCDCAA; }  /* function names */
+.tok-str{  fill:#CE9178; }  /* strings */
+.tok-num{  fill:#B5CEA8; }  /* numbers */
+.tok-cmt{  fill:#6A9955; opacity:.95; font-style:italic; } /* comments */
+.tok-op{   fill:#D4D4D4; }  /* operators  punctuation */
+</style><linearGradient
+       id="bg"
+       x1="0"
+       x2="1"
+       y1="0"
+       y2="1"><stop
+         offset="0%"
+         stop-color="#0b1020"
+         id="stop1" /><stop
+         offset="100%"
+         stop-color="#0f172a"
+         id="stop2" /></linearGradient><filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter408"
+       x="-0.0023299071"
+       y="-0.004025834"
+       width="1.0046598"
+       height="1.0080517"><feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="1.7965023"
+         id="feGaussianBlur408" /></filter></defs><!-- Background --><!-- Icon box --><!-- Terminal glyph --><!-- Brand line: BAY $oftware.dev  (space between Y and $) --><!-- Tagline --><g
+     inkscape:groupmode="layer"
+     id="layer1"
+     inkscape:label="Background"
+     style="display:inline"><rect
+       style="display:inline;fill:#0f172a;fill-opacity:1"
+       id="rect11"
+       width="1536"
+       height="1024"
+       x="2.2097087"
+       y="2.2097087"
+       rx="16"
+       ry="16"
+       inkscape:label="Color" /><g
+       id="g2"
+       inkscape:label="code"
+       style="display:inline;mix-blend-mode:normal;opacity:0.73;filter:url(#filter408)"
+       transform="matrix(0.83022547,0,0,0.95391479,-0.37507341,-49.055852)"><text
+         x="395.50592"
+         y="1462.5328"
+         class="code"
+         xml:space="preserve"
+         id="text11"
+         transform="matrix(0.89879405,-0.43837115,0.56468841,0.837185,0,0)"><tspan
+   class="tok-cmt"
+   id="tspan2"># nth smallest via sort(1)</tspan>
+<tspan
+   class="tok-fn"
+   id="tspan3">nth</tspan><tspan
+   class="tok-op"
+   id="tspan4">(</tspan><tspan
+   class="tok-op"
+   id="tspan5">)</tspan><tspan
+   class="tok-op"
+   id="tspan6">{</tspan> <tspan
+   class="tok-kw"
+   id="tspan7">local</tspan> n<tspan
+   class="tok-op"
+   id="tspan8">=</tspan><tspan
+   class="tok-op"
+   id="tspan9" />amp<tspan
+   class="tok-op"
+   id="tspan10">;</tspan>quot<tspan
+   class="tok-op"
+   id="tspan11">;</tspan>$<tspan
+   class="tok-num"
+   id="tspan12">1</tspan><tspan
+   class="tok-op"
+   id="tspan13" />amp<tspan
+   class="tok-op"
+   id="tspan14">;</tspan>quot<tspan
+   class="tok-op"
+   id="tspan15">;</tspan><tspan
+   class="tok-op"
+   id="tspan16">;</tspan> shift<tspan
+   class="tok-op"
+   id="tspan17">;</tspan>
+  printf <tspan
+   class="tok-op"
+   id="tspan20" />amp<tspan
+   class="tok-op"
+   id="tspan22">;</tspan>quot<tspan
+   class="tok-op"
+   id="tspan23">;</tspan><tspan
+   class="tok-op"
+   id="tspan24">%</tspan>s\n<tspan
+   class="tok-op"
+   id="tspan25" />amp<tspan
+   class="tok-op"
+   id="tspan26">;</tspan>quot<tspan
+   class="tok-op"
+   id="tspan27">;</tspan> <tspan
+   class="tok-op"
+   id="tspan28" />amp<tspan
+   class="tok-op"
+   id="tspan29">;</tspan>quot<tspan
+   class="tok-op"
+   id="tspan30">;</tspan>$@<tspan
+   class="tok-op"
+   id="tspan31" />amp<tspan
+   class="tok-op"
+   id="tspan32">;</tspan>quot<tspan
+   class="tok-op"
+   id="tspan33">;</tspan> <tspan
+   class="tok-op"
+   id="tspan34">|</tspan> sort <tspan
+   class="tok-op"
+   id="tspan35">|</tspan> sed <tspan
+   class="tok-op"
+   id="tspan36">-</tspan>n $<tspan
+   class="tok-op"
+   id="tspan37">{</tspan>n<tspan
+   class="tok-op"
+   id="tspan38">}</tspan>p
+<tspan
+   class="tok-op"
+   id="tspan39">}</tspan>
+nth <tspan
+   class="tok-num"
+   id="tspan40">3</tspan> <tspan
+   class="tok-num"
+   id="tspan41">7</tspan> <tspan
+   class="tok-num"
+   id="tspan42">5</tspan> <tspan
+   class="tok-num"
+   id="tspan43">9</tspan> <tspan
+   class="tok-num"
+   id="tspan44">1</tspan></text><text
+         x="824.18579"
+         y="510.42758"
+         class="code"
+         xml:space="preserve"
+         id="text5"
+         transform="matrix(0.95105652,-0.30901699,0.17535472,0.99448602,0,0)"><tspan
+   id="tspan45" /><tspan
+   class="tok-str"
+   id="tspan46">tok-cmt</tspan><tspan
+   class="tok-op"
+   id="tspan47" /><tspan
+   class="tok-op"
+   id="tspan48">/</tspan><tspan
+   class="tok-op"
+   id="tspan49">*</tspan> iterative fibonacci <tspan
+   class="tok-op"
+   id="tspan50">*</tspan><tspan
+   class="tok-op"
+   id="tspan51">/</tspan><tspan
+   class="tok-op"
+   id="tspan52" /><tspan
+   class="tok-op"
+   id="tspan53">/</tspan>tspan<tspan
+   class="tok-op"
+   id="tspan54" />
+int <tspan
+   class="tok-fn"
+   id="tspan55">fib</tspan><tspan
+   class="tok-op"
+   id="tspan56">(</tspan>int n<tspan
+   class="tok-op"
+   id="tspan57">)</tspan><tspan
+   class="tok-op"
+   id="tspan58">{</tspan>
+  <tspan
+   class="tok-kw"
+   id="tspan59">if</tspan><tspan
+   class="tok-op"
+   id="tspan60">(</tspan>n2<tspan
+   class="tok-op"
+   id="tspan61">)</tspan> <tspan
+   class="tok-kw"
+   id="tspan62">return</tspan> n<tspan
+   class="tok-op"
+   id="tspan63">;</tspan>
+  int a<tspan
+   class="tok-op"
+   id="tspan64">=</tspan><tspan
+   class="tok-num"
+   id="tspan65">0</tspan><tspan
+   class="tok-op"
+   id="tspan66">,</tspan>b<tspan
+   class="tok-op"
+   id="tspan67">=</tspan><tspan
+   class="tok-num"
+   id="tspan68">1</tspan><tspan
+   class="tok-op"
+   id="tspan69">,</tspan>t<tspan
+   class="tok-op"
+   id="tspan70">;</tspan>
+  <tspan
+   class="tok-kw"
+   id="tspan71">for</tspan><tspan
+   class="tok-op"
+   id="tspan72">(</tspan>int i<tspan
+   class="tok-op"
+   id="tspan73">=</tspan><tspan
+   class="tok-num"
+   id="tspan74">2</tspan><tspan
+   class="tok-op"
+   id="tspan75">;</tspan>i<tspan
+   class="tok-op"
+   id="tspan76">=</tspan>n<tspan
+   class="tok-op"
+   id="tspan77">;</tspan>i<tspan
+   class="tok-op"
+   id="tspan78">+</tspan><tspan
+   class="tok-op"
+   id="tspan79">+</tspan><tspan
+   class="tok-op"
+   id="tspan80">)</tspan><tspan
+   class="tok-op"
+   id="tspan81">{</tspan> t<tspan
+   class="tok-op"
+   id="tspan82">=</tspan>a<tspan
+   class="tok-op"
+   id="tspan83">+</tspan>b<tspan
+   class="tok-op"
+   id="tspan84">;</tspan> a<tspan
+   class="tok-op"
+   id="tspan85">=</tspan>b<tspan
+   class="tok-op"
+   id="tspan86">;</tspan> b<tspan
+   class="tok-op"
+   id="tspan87">=</tspan>t<tspan
+   class="tok-op"
+   id="tspan88">;</tspan> <tspan
+   class="tok-op"
+   id="tspan89">}</tspan>
+  <tspan
+   class="tok-kw"
+   id="tspan90">return</tspan> b<tspan
+   class="tok-op"
+   id="tspan91">;</tspan>
+<tspan
+   class="tok-op"
+   id="tspan92">}</tspan></text><text
+         x="310.74332"
+         y="17.369987"
+         class="code"
+         xml:space="preserve"
+         id="text4"
+         transform="matrix(0.98768832,0.15643447,-0.01762392,1.0096738,0,0)"><tspan
+   class="tok-cmt"
+   id="tspan93">// Lomuto partition</tspan>
+<tspan
+   class="tok-kw"
+   id="tspan94">static</tspan> int <tspan
+   class="tok-fn"
+   id="tspan95">part</tspan><tspan
+   class="tok-op"
+   id="tspan96">(</tspan>int<tspan
+   class="tok-op"
+   id="tspan97">[</tspan><tspan
+   class="tok-op"
+   id="tspan98">]</tspan> a<tspan
+   class="tok-op"
+   id="tspan99">,</tspan> int lo<tspan
+   class="tok-op"
+   id="tspan100">,</tspan> int hi<tspan
+   class="tok-op"
+   id="tspan101">)</tspan><tspan
+   class="tok-op"
+   id="tspan102">{</tspan>
+  int p <tspan
+   class="tok-op"
+   id="tspan103">=</tspan> a<tspan
+   class="tok-op"
+   id="tspan104">[</tspan>hi<tspan
+   class="tok-op"
+   id="tspan105">]</tspan><tspan
+   class="tok-op"
+   id="tspan106">,</tspan> i <tspan
+   class="tok-op"
+   id="tspan107">=</tspan> lo<tspan
+   class="tok-op"
+   id="tspan108">;</tspan>
+  <tspan
+   class="tok-kw"
+   id="tspan109">for</tspan><tspan
+   class="tok-op"
+   id="tspan110">(</tspan>int j<tspan
+   class="tok-op"
+   id="tspan111">=</tspan>lo<tspan
+   class="tok-op"
+   id="tspan112">;</tspan> j<tspan
+   class="tok-op"
+   id="tspan113" />lt<tspan
+   class="tok-op"
+   id="tspan114">;</tspan>hi <tspan
+   class="tok-op"
+   id="tspan115">/</tspan><tspan
+   class="tok-op"
+   id="tspan116" />gt<tspan
+   class="tok-op"
+   id="tspan117">;</tspan><tspan
+   class="tok-op"
+   id="tspan118">;</tspan> j<tspan
+   class="tok-op"
+   id="tspan119">+</tspan><tspan
+   class="tok-op"
+   id="tspan120">+</tspan><tspan
+   class="tok-op"
+   id="tspan121">)</tspan>
+    <tspan
+   class="tok-kw"
+   id="tspan122">if</tspan><tspan
+   class="tok-op"
+   id="tspan123">(</tspan>a<tspan
+   class="tok-op"
+   id="tspan124">[</tspan>j<tspan
+   class="tok-op"
+   id="tspan125">]</tspan> <tspan
+   class="tok-op"
+   id="tspan126">=</tspan> p<tspan
+   class="tok-op"
+   id="tspan127">)</tspan><tspan
+   class="tok-op"
+   id="tspan128">{</tspan> int t<tspan
+   class="tok-op"
+   id="tspan129">=</tspan>a<tspan
+   class="tok-op"
+   id="tspan130">[</tspan>i<tspan
+   class="tok-op"
+   id="tspan131">]</tspan><tspan
+   class="tok-op"
+   id="tspan132">;</tspan> a<tspan
+   class="tok-op"
+   id="tspan133">[</tspan>i<tspan
+   class="tok-op"
+   id="tspan134">]</tspan><tspan
+   class="tok-op"
+   id="tspan135">=</tspan>a<tspan
+   class="tok-op"
+   id="tspan136">[</tspan>j<tspan
+   class="tok-op"
+   id="tspan137">]</tspan><tspan
+   class="tok-op"
+   id="tspan138">;</tspan> a<tspan
+   class="tok-op"
+   id="tspan139">[</tspan>j<tspan
+   class="tok-op"
+   id="tspan140">]</tspan><tspan
+   class="tok-op"
+   id="tspan141">=</tspan>t<tspan
+   class="tok-op"
+   id="tspan142">;</tspan> i<tspan
+   class="tok-op"
+   id="tspan143">+</tspan><tspan
+   class="tok-op"
+   id="tspan144">+</tspan><tspan
+   class="tok-op"
+   id="tspan145">;</tspan> <tspan
+   class="tok-op"
+   id="tspan146">}</tspan>
+  a<tspan
+   class="tok-op"
+   id="tspan147">[</tspan>hi<tspan
+   class="tok-op"
+   id="tspan148">]</tspan><tspan
+   class="tok-op"
+   id="tspan149">=</tspan>a<tspan
+   class="tok-op"
+   id="tspan150">[</tspan>i<tspan
+   class="tok-op"
+   id="tspan151">]</tspan><tspan
+   class="tok-op"
+   id="tspan152">;</tspan> a<tspan
+   class="tok-op"
+   id="tspan153">[</tspan>i<tspan
+   class="tok-op"
+   id="tspan154">]</tspan><tspan
+   class="tok-op"
+   id="tspan155">=</tspan>p<tspan
+   class="tok-op"
+   id="tspan156">;</tspan> <tspan
+   class="tok-kw"
+   id="tspan157">return</tspan> i<tspan
+   class="tok-op"
+   id="tspan158">;</tspan>
+<tspan
+   class="tok-op"
+   id="tspan159">}</tspan></text><text
+         x="185.92438"
+         y="676.98315"
+         class="code"
+         xml:space="preserve"
+         id="text9"
+         transform="matrix(0.9945219,0.10452846,-0.17407221,0.98721255,0,0)"><tspan
+   class="tok-op"
+   id="tspan160">-</tspan><tspan
+   class="tok-op"
+   id="tspan161">-</tspan> top<tspan
+   class="tok-op"
+   id="tspan162">-</tspan><tspan
+   class="tok-fn"
+   id="tspan163">k</tspan><tspan
+   class="tok-op"
+   id="tspan164">(</tspan>k<tspan
+   class="tok-op"
+   id="tspan165">=</tspan><tspan
+   class="tok-num"
+   id="tspan166">3</tspan><tspan
+   class="tok-op"
+   id="tspan167">)</tspan>
+SELECT name<tspan
+   class="tok-op"
+   id="tspan168">,</tspan> score FROM scores
+ORDER BY score DESC
+LIMIT <tspan
+   class="tok-num"
+   id="tspan169">3</tspan><tspan
+   class="tok-op"
+   id="tspan170">;</tspan></text><text
+         x="-192.10927"
+         y="338.36429"
+         class="code"
+         xml:space="preserve"
+         id="text6-9"
+         transform="matrix(0.92718386,-0.37460659,0.53809412,0.8611306,0,0)"><tspan
+   class="tok-cmt"
+   id="tspan171">// BFS</tspan>
+<tspan
+   class="tok-kw"
+   id="tspan172">function</tspan> <tspan
+   class="tok-fn"
+   id="tspan173">bfs</tspan><tspan
+   class="tok-op"
+   id="tspan174">(</tspan>g<tspan
+   class="tok-op"
+   id="tspan175">,</tspan> s<tspan
+   class="tok-op"
+   id="tspan176">)</tspan><tspan
+   class="tok-op"
+   id="tspan177">{</tspan>
+  <tspan
+   class="tok-kw"
+   id="tspan178">const</tspan> q<tspan
+   class="tok-op"
+   id="tspan179">=</tspan><tspan
+   class="tok-op"
+   id="tspan180">[</tspan>s<tspan
+   class="tok-op"
+   id="tspan181">]</tspan><tspan
+   class="tok-op"
+   id="tspan182">,</tspan> seen<tspan
+   class="tok-op"
+   id="tspan183">=</tspan><tspan
+   class="tok-kw"
+   id="tspan184">new</tspan> <tspan
+   class="tok-type"
+   id="tspan185">Set</tspan><tspan
+   class="tok-op"
+   id="tspan186">(</tspan><tspan
+   class="tok-op"
+   id="tspan187">[</tspan>s<tspan
+   class="tok-op"
+   id="tspan188">]</tspan><tspan
+   class="tok-op"
+   id="tspan189">)</tspan><tspan
+   class="tok-op"
+   id="tspan190">;</tspan>
+  <tspan
+   class="tok-kw"
+   id="tspan191">while</tspan><tspan
+   class="tok-op"
+   id="tspan192">(</tspan>q.length<tspan
+   class="tok-op"
+   id="tspan193">)</tspan><tspan
+   class="tok-op"
+   id="tspan194">{</tspan>
+    <tspan
+   class="tok-kw"
+   id="tspan195">const</tspan> v<tspan
+   class="tok-op"
+   id="tspan196">=</tspan>q.<tspan
+   class="tok-fn"
+   id="tspan197">shift</tspan><tspan
+   class="tok-op"
+   id="tspan198">(</tspan><tspan
+   class="tok-op"
+   id="tspan199">)</tspan><tspan
+   class="tok-op"
+   id="tspan200">;</tspan>
+    <tspan
+   class="tok-kw"
+   id="tspan201">for</tspan><tspan
+   class="tok-op"
+   id="tspan202">(</tspan><tspan
+   class="tok-kw"
+   id="tspan203">const</tspan> u <tspan
+   class="tok-fn"
+   id="tspan204">of</tspan><tspan
+   class="tok-op"
+   id="tspan205">(</tspan>g<tspan
+   class="tok-op"
+   id="tspan206">[</tspan>v<tspan
+   class="tok-op"
+   id="tspan207">]</tspan><tspan
+   class="tok-op"
+   id="tspan208">|</tspan><tspan
+   class="tok-op"
+   id="tspan209">|</tspan><tspan
+   class="tok-op"
+   id="tspan210">[</tspan><tspan
+   class="tok-op"
+   id="tspan211">]</tspan><tspan
+   class="tok-op"
+   id="tspan212">)</tspan><tspan
+   class="tok-op"
+   id="tspan213">)</tspan>
+      <tspan
+   class="tok-kw"
+   id="tspan214">if</tspan><tspan
+   class="tok-op"
+   id="tspan215">(</tspan><tspan
+   class="tok-op"
+   id="tspan216">!</tspan>seen.<tspan
+   class="tok-fn"
+   id="tspan217">has</tspan><tspan
+   class="tok-op"
+   id="tspan218">(</tspan>u<tspan
+   class="tok-op"
+   id="tspan219">)</tspan><tspan
+   class="tok-op"
+   id="tspan220">)</tspan><tspan
+   class="tok-op"
+   id="tspan221">{</tspan> seen.<tspan
+   class="tok-fn"
+   id="tspan222">add</tspan><tspan
+   class="tok-op"
+   id="tspan223">(</tspan>u<tspan
+   class="tok-op"
+   id="tspan224">)</tspan><tspan
+   class="tok-op"
+   id="tspan225">;</tspan> q.<tspan
+   class="tok-fn"
+   id="tspan226">push</tspan><tspan
+   class="tok-op"
+   id="tspan227">(</tspan>u<tspan
+   class="tok-op"
+   id="tspan228">)</tspan><tspan
+   class="tok-op"
+   id="tspan229">;</tspan> <tspan
+   class="tok-op"
+   id="tspan230">}</tspan>
+  <tspan
+   class="tok-op"
+   id="tspan231">}</tspan>
+  <tspan
+   class="tok-kw"
+   id="tspan232">return</tspan> seen<tspan
+   class="tok-op"
+   id="tspan233">;</tspan>
+<tspan
+   class="tok-op"
+   id="tspan234">}</tspan></text><text
+         x="818.14252"
+         y="783.69196"
+         class="code"
+         xml:space="preserve"
+         id="text3"
+         transform="matrix(0.98480776,-0.17364818,0.07014071,1.0030589,0,0)"><tspan
+   class="tok-cmt"
+   id="tspan235"># binary search</tspan>
+<tspan
+   class="tok-kw"
+   id="tspan236">def</tspan> <tspan
+   class="tok-fn"
+   id="tspan237">bs</tspan><tspan
+   class="tok-op"
+   id="tspan238">(</tspan>a<tspan
+   class="tok-op"
+   id="tspan239">,</tspan> x<tspan
+   class="tok-op"
+   id="tspan240">)</tspan><tspan
+   class="tok-op"
+   id="tspan241">:</tspan>
+    lo<tspan
+   class="tok-op"
+   id="tspan242">,</tspan> hi <tspan
+   class="tok-op"
+   id="tspan243">=</tspan> <tspan
+   class="tok-num"
+   id="tspan244">0</tspan><tspan
+   class="tok-op"
+   id="tspan245">,</tspan> <tspan
+   class="tok-fn"
+   id="tspan246">len</tspan><tspan
+   class="tok-op"
+   id="tspan247">(</tspan>a<tspan
+   class="tok-op"
+   id="tspan248">)</tspan><tspan
+   class="tok-op"
+   id="tspan249">-</tspan><tspan
+   class="tok-num"
+   id="tspan250">1</tspan>
+    <tspan
+   class="tok-kw"
+   id="tspan251">while</tspan> lo <tspan
+   class="tok-op"
+   id="tspan252">=</tspan> hi<tspan
+   class="tok-op"
+   id="tspan253">:</tspan>
+        mid <tspan
+   class="tok-op"
+   id="tspan254">=</tspan> <tspan
+   class="tok-op"
+   id="tspan255">(</tspan>lo <tspan
+   class="tok-op"
+   id="tspan256">+</tspan> hi<tspan
+   class="tok-op"
+   id="tspan257">)</tspan><tspan
+   class="tok-cmt"
+   id="tspan258">//2</tspan>
+        <tspan
+   class="tok-kw"
+   id="tspan259">if</tspan> a<tspan
+   class="tok-op"
+   id="tspan260">[</tspan>mid<tspan
+   class="tok-op"
+   id="tspan261">]</tspan> <tspan
+   class="tok-op"
+   id="tspan262">=</tspan><tspan
+   class="tok-op"
+   id="tspan263">=</tspan> x<tspan
+   class="tok-op"
+   id="tspan264">:</tspan> <tspan
+   class="tok-kw"
+   id="tspan265">return</tspan> mid
+        <tspan
+   class="tok-kw"
+   id="tspan266">elif</tspan> a<tspan
+   class="tok-op"
+   id="tspan267">[</tspan>mid<tspan
+   class="tok-op"
+   id="tspan268">]</tspan>  x<tspan
+   class="tok-op"
+   id="tspan269">:</tspan> lo <tspan
+   class="tok-op"
+   id="tspan270">=</tspan> mid <tspan
+   class="tok-op"
+   id="tspan271">+</tspan> <tspan
+   class="tok-num"
+   id="tspan272">1</tspan>
+        <tspan
+   class="tok-kw"
+   id="tspan273">else</tspan><tspan
+   class="tok-op"
+   id="tspan274">:</tspan> hi <tspan
+   class="tok-op"
+   id="tspan275">=</tspan> mid <tspan
+   class="tok-op"
+   id="tspan276">-</tspan> <tspan
+   class="tok-num"
+   id="tspan277">1</tspan>
+    <tspan
+   class="tok-kw"
+   id="tspan278">return</tspan> <tspan
+   class="tok-op"
+   id="tspan279">-</tspan><tspan
+   class="tok-num"
+   id="tspan280">1</tspan></text><text
+         x="1085.7861"
+         y="537.97803"
+         class="code"
+         xml:space="preserve"
+         id="text8"
+         transform="matrix(0.98480775,-0.17364818,0.24251264,0.97266509,0,0)"><tspan
+   class="tok-cmt"
+   id="tspan281">// insertion sort</tspan>
+fn <tspan
+   class="tok-fn"
+   id="tspan282">isort</tspan><tspan
+   class="tok-op"
+   id="tspan283">(</tspan>a<tspan
+   class="tok-op"
+   id="tspan284">:</tspan>  <tspan
+   class="tok-op"
+   id="tspan285">[</tspan>i32<tspan
+   class="tok-op"
+   id="tspan286">]</tspan><tspan
+   class="tok-op"
+   id="tspan287">)</tspan><tspan
+   class="tok-op"
+   id="tspan288">{</tspan>
+  <tspan
+   class="tok-kw"
+   id="tspan289">for</tspan> i <tspan
+   class="tok-kw"
+   id="tspan290">in</tspan> <tspan
+   class="tok-num"
+   id="tspan291">1</tspan>..a.<tspan
+   class="tok-fn"
+   id="tspan292">len</tspan><tspan
+   class="tok-op"
+   id="tspan293">(</tspan><tspan
+   class="tok-op"
+   id="tspan294">)</tspan><tspan
+   class="tok-op"
+   id="tspan295">{</tspan>
+    <tspan
+   class="tok-kw"
+   id="tspan296">let</tspan> mut j<tspan
+   class="tok-op"
+   id="tspan297">=</tspan>i<tspan
+   class="tok-op"
+   id="tspan298">;</tspan>
+    <tspan
+   class="tok-kw"
+   id="tspan299">while</tspan> j0  a<tspan
+   class="tok-op"
+   id="tspan300">[</tspan>j<tspan
+   class="tok-op"
+   id="tspan301">-</tspan><tspan
+   class="tok-num"
+   id="tspan302">1</tspan><tspan
+   class="tok-op"
+   id="tspan303">]</tspan>a<tspan
+   class="tok-op"
+   id="tspan304">[</tspan>j<tspan
+   class="tok-op"
+   id="tspan305">]</tspan> <tspan
+   class="tok-op"
+   id="tspan306">{</tspan> a.<tspan
+   class="tok-fn"
+   id="tspan307">swap</tspan><tspan
+   class="tok-op"
+   id="tspan308">(</tspan>j<tspan
+   class="tok-op"
+   id="tspan309">,</tspan> j<tspan
+   class="tok-op"
+   id="tspan310">-</tspan><tspan
+   class="tok-num"
+   id="tspan311">1</tspan><tspan
+   class="tok-op"
+   id="tspan312">)</tspan><tspan
+   class="tok-op"
+   id="tspan313">;</tspan> j<tspan
+   class="tok-op"
+   id="tspan314">-</tspan><tspan
+   class="tok-op"
+   id="tspan315">=</tspan><tspan
+   class="tok-num"
+   id="tspan316">1</tspan><tspan
+   class="tok-op"
+   id="tspan317">;</tspan> <tspan
+   class="tok-op"
+   id="tspan318">}</tspan>
+  <tspan
+   class="tok-op"
+   id="tspan319">}</tspan>
+<tspan
+   class="tok-op"
+   id="tspan320">}</tspan></text><text
+         x="929.26978"
+         y="649.47443"
+         class="code"
+         xml:space="preserve"
+         id="text7-0"
+         transform="matrix(0.9612617,0.27563736,-0.37667003,0.93229104,0,0)"><tspan
+   class="tok-cmt"
+   id="tspan321">// two-sum</tspan>
+func <tspan
+   class="tok-type"
+   id="tspan322">TwoSum</tspan><tspan
+   class="tok-op"
+   id="tspan323">(</tspan>a <tspan
+   class="tok-op"
+   id="tspan324">[</tspan><tspan
+   class="tok-op"
+   id="tspan325">]</tspan>int<tspan
+   class="tok-op"
+   id="tspan326">,</tspan> t int<tspan
+   class="tok-op"
+   id="tspan327">)</tspan> <tspan
+   class="tok-op"
+   id="tspan328">[</tspan><tspan
+   class="tok-num"
+   id="tspan329">2</tspan><tspan
+   class="tok-op"
+   id="tspan330">]</tspan>int <tspan
+   class="tok-op"
+   id="tspan331">{</tspan>
+  m <tspan
+   class="tok-op"
+   id="tspan332">:</tspan><tspan
+   class="tok-op"
+   id="tspan333">=</tspan> <tspan
+   class="tok-fn"
+   id="tspan334">make</tspan><tspan
+   class="tok-op"
+   id="tspan335">(</tspan>map<tspan
+   class="tok-op"
+   id="tspan336">[</tspan>int<tspan
+   class="tok-op"
+   id="tspan337">]</tspan>int<tspan
+   class="tok-op"
+   id="tspan338">)</tspan>
+  <tspan
+   class="tok-kw"
+   id="tspan339">for</tspan> i<tspan
+   class="tok-op"
+   id="tspan340">,</tspan> v <tspan
+   class="tok-op"
+   id="tspan341">:</tspan><tspan
+   class="tok-op"
+   id="tspan342">=</tspan> range a <tspan
+   class="tok-op"
+   id="tspan343">{</tspan>
+    <tspan
+   class="tok-kw"
+   id="tspan344">if</tspan> j<tspan
+   class="tok-op"
+   id="tspan345">,</tspan> ok <tspan
+   class="tok-op"
+   id="tspan346">:</tspan><tspan
+   class="tok-op"
+   id="tspan347">=</tspan> m<tspan
+   class="tok-op"
+   id="tspan348">[</tspan>t<tspan
+   class="tok-op"
+   id="tspan349">-</tspan>v<tspan
+   class="tok-op"
+   id="tspan350">]</tspan><tspan
+   class="tok-op"
+   id="tspan351">;</tspan> ok <tspan
+   class="tok-op"
+   id="tspan352">{</tspan> <tspan
+   class="tok-kw"
+   id="tspan353">return</tspan> <tspan
+   class="tok-op"
+   id="tspan354">[</tspan><tspan
+   class="tok-num"
+   id="tspan355">2</tspan><tspan
+   class="tok-op"
+   id="tspan356">]</tspan>int<tspan
+   class="tok-op"
+   id="tspan357">{</tspan>j<tspan
+   class="tok-op"
+   id="tspan358">,</tspan> i<tspan
+   class="tok-op"
+   id="tspan359">}</tspan> <tspan
+   class="tok-op"
+   id="tspan360">}</tspan>
+    m<tspan
+   class="tok-op"
+   id="tspan361">[</tspan>v<tspan
+   class="tok-op"
+   id="tspan362">]</tspan> <tspan
+   class="tok-op"
+   id="tspan363">=</tspan> i
+  <tspan
+   class="tok-op"
+   id="tspan364">}</tspan>
+  <tspan
+   class="tok-kw"
+   id="tspan365">return</tspan> <tspan
+   class="tok-op"
+   id="tspan366">[</tspan><tspan
+   class="tok-num"
+   id="tspan367">2</tspan><tspan
+   class="tok-op"
+   id="tspan368">]</tspan>int<tspan
+   class="tok-op"
+   id="tspan369">{</tspan><tspan
+   class="tok-op"
+   id="tspan370">-</tspan><tspan
+   class="tok-num"
+   id="tspan371">1</tspan><tspan
+   class="tok-op"
+   id="tspan372">,</tspan> <tspan
+   class="tok-op"
+   id="tspan373">-</tspan><tspan
+   class="tok-num"
+   id="tspan374">1</tspan><tspan
+   class="tok-op"
+   id="tspan375">}</tspan>
+<tspan
+   class="tok-op"
+   id="tspan376">}</tspan></text><text
+         x="-113.36332"
+         y="918.87683"
+         class="code"
+         xml:space="preserve"
+         id="text10"
+         transform="matrix(0.99026807,-0.1391731,0.24325447,0.97564039,0,0)"><tspan
+   class="tok-op"
+   id="tspan377">*</tspan> counting frequencies
+PROCEDURE DIVISION.
+PERFORM VARYING I FROM <tspan
+   class="tok-num"
+   id="tspan378">1</tspan> BY <tspan
+   class="tok-num"
+   id="tspan379">1</tspan> UNTIL I  N
+  ADD <tspan
+   class="tok-num"
+   id="tspan380">1</tspan> TO <tspan
+   class="tok-fn"
+   id="tspan381">COUNT</tspan><tspan
+   class="tok-op"
+   id="tspan382">(</tspan><tspan
+   class="tok-fn"
+   id="tspan383">A</tspan><tspan
+   class="tok-op"
+   id="tspan384">(</tspan>I<tspan
+   class="tok-op"
+   id="tspan385">)</tspan><tspan
+   class="tok-op"
+   id="tspan386">)</tspan>
+END<tspan
+   class="tok-op"
+   id="tspan387">-</tspan>PERFORM.</text><text
+         x="1419.068"
+         y="458.78238"
+         class="code"
+         xml:space="preserve"
+         id="text12"
+         transform="matrix(0.98480775,0.17364818,-0.27715564,0.96655659,0,0)"><tspan
+   id="tspan388" /><tspan
+   class="tok-str"
+   id="tspan389">tok-cmt</tspan><tspan
+   class="tok-op"
+   id="tspan390" /><tspan
+   class="tok-op"
+   id="tspan391">/</tspan><tspan
+   class="tok-op"
+   id="tspan392">*</tspan> factorial <tspan
+   class="tok-op"
+   id="tspan393">*</tspan><tspan
+   class="tok-op"
+   id="tspan394">/</tspan><tspan
+   class="tok-op"
+   id="tspan395" /><tspan
+   class="tok-op"
+   id="tspan396">/</tspan>tspan<tspan
+   class="tok-op"
+   id="tspan397" />
+parse arg n
+f<tspan
+   class="tok-op"
+   id="tspan398">=</tspan><tspan
+   class="tok-num"
+   id="tspan399">1</tspan><tspan
+   class="tok-op"
+   id="tspan400">;</tspan> <tspan
+   class="tok-kw"
+   id="tspan401">do</tspan> i<tspan
+   class="tok-op"
+   id="tspan402">=</tspan><tspan
+   class="tok-num"
+   id="tspan403">2</tspan> to n<tspan
+   class="tok-op"
+   id="tspan404">;</tspan> f<tspan
+   class="tok-op"
+   id="tspan405">=</tspan>f<tspan
+   class="tok-op"
+   id="tspan406">*</tspan>i<tspan
+   class="tok-op"
+   id="tspan407">;</tspan> end
+say f</text></g></g><g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Company Name"
+     transform="matrix(1.2919692,0,0,1.9231867,-40.331203,198.74897)"
+     style="display:inline"><text
+       x="173.94258"
+       y="214.7722"
+       class="tag"
+       fill="#9bb3d3"
+       id="text7"
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:56px;line-height:1;font-family:Inter, 'Segoe UI', DejaVuSans, system-ui, sans-serif;display:inline;fill:#9bb3d3;stroke-width:1.0205"
+       inkscape:label="Bottom"
+       transform="scale(1.0204993,0.97991248)"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:51.7924px;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono, @wght=500';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'wght' 500;fill:#94a3b8;fill-opacity:1;stroke-width:1.0205"
+         id="tspan18">Open Source • DevOps • Engineering</tspan></text><g
+       id="g408"><text
+         x="258.79559"
+         y="184.12923"
+         class="brand"
+         fill="#dfe4ea"
+         id="text6"
+         style="font-style:normal;font-variant:normal;font-weight:700;font-stretch:normal;font-size:96px;line-height:1;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;display:inline;fill:#dfe4ea;stroke-width:1.95699;stroke-dasharray:none"
+         inkscape:label="BAY Software.dev"
+         transform="scale(1.0696223,0.93490945)"
+         dx="0 0 0"><tspan
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:100.745px;line-height:1;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#e5e7eb;fill-opacity:1;stroke-width:1.95699;stroke-dasharray:none"
+   id="tspan21"
+   dx="0 0 0 3.4723682"><tspan
+   style="fill:#57a5fa;fill-opacity:1"
+   id="tspan408">BAY</tspan>So</tspan>ftware<tspan
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:100.745px;line-height:1;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#94a3b8;fill-opacity:1;stroke-width:1.95699;stroke-dasharray:none"
+   id="tspan19">.dev</tspan></text><g
+         id="g1"
+         transform="matrix(2.0334858,0,0,1.3660666,181.45796,112.13257)"
+         inkscape:label="Shell"><g
+           id="layer6"
+           inkscape:label="background"><rect
+             x="0.5"
+             y="0.5"
+             width="43"
+             height="43"
+             rx="8"
+             fill="#0f172a"
+             stroke="#334155"
+             id="rect1-5"
+             style="fill:#1f2937;fill-opacity:1;stroke-width:1.64175;stroke-dasharray:none"
+             inkscape:label="rect1" /></g><g
+           id="layer5"
+           inkscape:label="Icon"><rect
+             x="0.5"
+             y="0.5"
+             width="43"
+             height="43"
+             rx="8"
+             fill="#0f172a"
+             stroke="#334155"
+             id="rect1"
+             style="fill:none;fill-opacity:1;stroke-width:2.20183;stroke-dasharray:none"
+             inkscape:label="rect1" /><text
+             x="22"
+             y="22"
+             text-anchor="middle"
+             dominant-baseline="middle"
+             font-family="system-ui,Segoe UI,Roboto,ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace"
+             font-size="18"
+             font-weight="700"
+             fill="#38bdf8"
+             id="text1"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:29.3333px;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono, Normal';font-variant-ligatures:normal;font-variant-position:sub;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;dominant-baseline:middle;text-anchor:middle;fill:#a7c9ef;fill-opacity:1"><tspan
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:29.3333px;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono, Normal';font-variant-ligatures:normal;font-variant-position:sub;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#57a5fa;fill-opacity:1"
+               id="tspan1">$_</tspan></text></g></g></g></g><metadata
+     id="metadata12"><rdf:RDF><cc:Work
+         rdf:about=""><dc:title>BAY $oftware.dev LinkedIn cover</dc:title></cc:Work></rdf:RDF></metadata><style
+     id="style2">
+    .card { fill:#0a1228; stroke:#1e293b; opacity:.92; }
+    .code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, Liberation Mono, monospace;
+            font-size:16px; line-height:1.4; white-space:pre; fill:#e5e7eb; }
+    .accent { fill:#7dd3fc; }
+  </style><style
+     id="style2-4">
+    .card { fill:#0a1228; stroke:#1e293b; opacity:.85; }
+    .code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, Liberation Mono, monospace;
+            font-size:16px; line-height:1.4; white-space:pre; }
+    .kw { fill:#7dd3fc; }
+    .type { fill:#a5b4fc; }
+    .fn { fill:#fde68a; }
+    .str { fill:#86efac; }
+    .num { fill:#fca5a5; }
+    .op { fill:#cbd5e1; }
+    .id { fill:#e5e7eb; }
+    .com { fill:#94a3b8; opacity:.9; font-style:italic; }
+  </style><style
+     id="style2-9">
+    .card { fill:#0a1228; stroke:#1e293b; opacity:.92; }
+    .code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, Liberation Mono, monospace;
+            font-size:16px; line-height:1.4; white-space:pre; fill:#e5e7eb; }
+    .accent { fill:#7dd3fc; }
+  </style><style
+     id="style2-3">
+    .card { fill:#0a1228; stroke:#1e293b; opacity:.92; }
+    .code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, Liberation Mono, monospace;
+            font-size:16px; line-height:1.4; white-space:pre; fill:#e5e7eb; }
+    .accent { fill:#7dd3fc; }
+  </style></svg>

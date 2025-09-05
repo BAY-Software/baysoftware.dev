@@ -1,0 +1,275 @@
+/* ---------- Theme tokens ---------- */
+:root{
+  --max:1440px; --pad:1rem;
+  --bg:#0f172a; --fg:#e5e7eb; --muted:#94a3b8; --accent:#3893fa;
+  --card-bg-start:#0f1a3a; --card-bg-end:#0b1430;
+  --stroke:#1f2937; --stroke-2:#1f2a44;
+}
+
+/* ---------- Base ---------- */
+*{box-sizing:border-box;font-family:OpenDyslexic,system-ui,Segoe UI,Roboto,Arial,Helvetica,sans-serif}
+html,body{height:100%;min-height:100svh}
+body{margin:0;color:var(--fg);background:#0b1020;display:flex;flex-direction:column}
+a{color:var(--accent);text-decoration:none}
+.wrap{max-width:var(--max);margin:0 auto;padding:var(--pad)}
+.muted{color:var(--muted);font-size:.95rem}
+
+/* ---------- Header / Nav ---------- */
+header{background:var(--bg);border-bottom:1px solid var(--stroke);position:sticky;top:0;z-index:1000}
+header .wrap{max-width:100%;padding:0 var(--pad);position:relative}
+.row{display:flex;align-items:center;justify-content:center;gap:1rem;min-height:56px}
+#primary-nav{display:flex;align-items:center;gap:1rem;white-space:nowrap;flex-wrap:nowrap;max-width:var(--max);margin-left:0;margin-right:auto;justify-content:flex-start}
+#primary-nav .brand-link{display:inline-flex;align-items:center;gap:.55rem}
+#primary-nav .brand-logo{height:56px;width:auto;display:block;filter:drop-shadow(0 2px 6px rgba(0,0,0,.35))}
+#primary-nav .brand-link::after{content:"";display:block;height:3px;margin-top:.25rem;border-radius:999px;background:var(--accent);opacity:.9}
+#primary-nav .nav-links{display:flex;gap:1rem;align-items:stretch;flex:1;justify-content:center}
+#primary-nav .nav-links a{color:var(--muted);padding:.5rem .75rem;border-radius:.5rem;text-align:center;flex:1 1 auto}
+#primary-nav .nav-links a:hover,#primary-nav .nav-links a.active{background:var(--accent);color:#0b1020}
+
+/* Condense logic (unchanged) */
+.nav-toggle{display:none;flex-direction:column;align-items:center;justify-content:center;gap:4px;background:transparent;border:1px solid var(--accent);width:44px;height:38px;padding:6px;border-radius:.5rem;margin-right:.75rem}
+.nav-toggle .bar{width:24px;height:2px;background:var(--accent);border-radius:2px}
+.nav-toggle:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header.measuring #primary-nav{width:max-content;justify-content:flex-start}
+header.measuring #primary-nav .nav-links{gap:2rem}
+header.measuring #primary-nav .nav-links a{flex:0 0 auto}
+header.measuring .nav-toggle{display:none!important}
+header.nav-condense .nav-toggle{display:inline-flex}
+header.nav-condense #primary-nav .nav-links{display:none!important}
+header.nav-condense.nav-open #primary-nav .nav-links{
+  display:flex!important;flex-direction:column;gap:.25rem;position:absolute;left:0;right:0;top:100%;
+  background:var(--bg);padding:.5rem 0 .75rem;border-top:1px solid var(--stroke)
+}
+header.nav-condense.nav-open #primary-nav .nav-links a{
+  display:block;padding:.65rem .75rem;border-radius:.5rem;background:#0d1430;border:1px solid var(--stroke-2);color:var(--fg);flex:1 0 auto
+}
+@media (min-width:721px){.row{justify-content:center} .nav-toggle{display:none} header.nav-condense .nav-toggle{display:inline-flex}}
+@media (max-width:720px){#primary-nav .brand-logo{height:40px;max-width:70vw}}
+
+/* ---------- Main ---------- */
+main{flex:1 0 auto;max-width:var(--max);margin:0 auto;padding:2rem 1rem 3rem}
+
+/* ---------- Hero (index) ---------- */
+.hero{display:grid;gap:1rem;text-align:center;padding:2rem 1rem 1rem}
+.hero h1{margin:0;font-size:clamp(2rem,3vw + 1rem,3rem)}
+.hero p{color:var(--muted);margin:.25rem auto 0;max-width:60ch}
+
+/* ---------- Generic grids (index) ---------- */
+.grid,.announcements{display:grid;gap:1rem;grid-template-columns:repeat(3,1fr);margin-top:2rem}
+@media (max-width:900px){.grid,.announcements{grid-template-columns:1fr}}
+
+/* ---------- Cards (shared) ---------- */
+.card{
+  position:relative;overflow:hidden;min-height:160px;padding:1rem;border:1px solid var(--stroke-2);border-radius:.9rem;
+  background:linear-gradient(180deg,var(--card-bg-start),var(--card-bg-end));
+  display:flex;flex-direction:column;justify-content:space-between;
+  box-shadow:0 1px 0 rgba(255,255,255,.04) inset,0 12px 24px rgba(0,0,0,.25),0 6px 12px rgba(13,20,48,.45);
+  transition:transform .35s ease,box-shadow .35s ease,filter .35s ease;transform-style:preserve-3d
+}
+.card:hover{transform:translateY(-6px) rotateX(2deg) rotateY(2deg);box-shadow:0 1px 0 rgba(255,255,255,.05) inset,0 18px 36px rgba(0,0,0,.35),0 8px 18px rgba(13,20,48,.55);filter:saturate(1.05)}
+.card-title{margin:.25rem 0 .5rem;font-size:1.1rem;text-align:center}
+.card-body{margin:0 0 .75rem;color:var(--muted)}
+.card-link{font-weight:600}
+
+/* Index highlight overlays remain unchanged */
+.grid .card{background:none;min-height:200px;box-shadow:0 12px 24px rgba(0,0,0,.25)}
+.grid .card::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.45);z-index:0}
+.grid .card > *{position:relative;z-index:1}
+.grid .card .card-title,.grid .card .card-body,.grid .card .card-link{color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.6)}
+.grid .card .card-link:hover{color:var(--accent)}
+.card-content{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:1rem;background:inherit;transition:transform .5s cubic-bezier(.4,0,.2,1);will-change:transform}
+.card-content.outgoing{z-index:0}
+
+/* ---------- Blocks ---------- */
+.tile,.post,.project,.role{background:#0d1430;border:1px solid var(--stroke-2);border-radius:.8rem;padding:1rem}
+.post,.project,.role{margin:.75rem 0}
+
+/* ---------- Forms (global defaults kept for index) ---------- */
+form{display:grid;gap:.75rem;max-width:700px}
+input,textarea{width:100%;padding:.75rem;border-radius:.5rem;border:1px solid var(--stroke-2);background:#0d1430;color:#e5e7eb}
+button{padding:.75rem 1rem;border:0;border-radius:.5rem;background:var(--accent);color:#0b1020;font-weight:700}
+
+/* ---------- Footer ---------- */
+footer{border-top:1px solid var(--stroke);background:#0a0f1f;margin-top:auto;text-align:center}
+footer .wrap{max-width:var(--max);padding:1rem}
+footer .links{display:flex;flex-wrap:wrap;gap:.75rem 1rem;justify-content:center}
+footer a{color:var(--muted)} footer a:hover{color:var(--accent)}
+.fine{color:#6b7280;font-size:.9rem}
+
+/* ---------- A11y / Motion ---------- */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skip-link:focus{left:1rem;top:1rem;width:auto;height:auto;background:#0f172a;color:#e5e7eb;padding:.5rem .75rem;border-radius:.5rem;z-index:1000}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* ---------- 404 / misc ---------- */
+.nf-wrap{display:flex;align-items:center;justify-content:center;min-height:60vh;padding:2rem 1rem;text-align:center;gap:2rem;flex-wrap:wrap}
+.nf-copy{max-width:38rem}
+.nf-actions{margin-top:1rem;display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;padding:.65rem 1rem;border:1px solid #334155;border-radius:.75rem;text-decoration:none}
+.btn:hover{border-color:#64748b}
+.nf-mascot{width:320px;max-width:40vw}
+.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}
+
+/* ---------- CONTACT PAGE ONLY (scoped) ---------- */
+/* Container that wraps the form card + four info cards */
+.contact-grid{display:grid;gap:1rem;grid-template-columns:repeat(4,minmax(0,1fr));align-items:stretch}
+.contact-form-card{grid-column:1 / -1;padding:1.25rem 1.5rem;display:flex;flex-direction:column}
+.contact-form-card form{flex:1;width:100%;max-width:none!important;margin:0;display:flex;flex-direction:column;gap:1rem}
+.contact-form-card label{display:flex;flex-direction:column;font-weight:600}
+.contact-form-card input[type="text"],.contact-form-card input[type="email"],.contact-form-card textarea{
+  width:100%;margin-top:.35rem;padding:1rem 1.1rem;border:1px solid var(--stroke-2);background:#0d1430;color:var(--fg);border-radius:.6rem;font-size:1rem
+}
+.contact-form-card textarea{min-height:14rem;resize:vertical}
+.contact-form-card input:focus,.contact-form-card textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 28%,transparent)}
+.contact-form-card button{width:100%;padding:1rem;margin-top:1rem;border:0;border-radius:.6rem;background:var(--accent);color:#0b1020;font-weight:700;cursor:pointer;font-size:1rem}
+.info-card{display:flex;flex-direction:column;justify-content:flex-start;padding:1rem}
+.info-card .card-title{font-size:1rem;margin:.25rem 0 .4rem;text-align:left}
+.contact-list{list-style:none;margin:0;padding:0}
+.contact-list li{display:flex;align-items:center;gap:.5rem;margin:.35rem 0;font-size:.92rem}
+.contact-list svg{width:16px;height:16px;stroke:var(--accent);stroke-width:2;fill:none;flex-shrink:0}
+.info-card a{text-decoration:underline}
+
+/* Responsive wrap for contact cards only */
+@media (max-width:1100px){.contact-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:640px){.contact-grid{grid-template-columns:1fr}}
+@view-transition {
+  navigation: auto;
+}
+/* ---------- Theme tokens ---------- */
+:root{
+  --max:1440px; --pad:1rem;
+  --bg:#0f172a; --fg:#e5e7eb; --muted:#94a3b8; --accent:#3893fa;
+  --card-bg-start:#0f1a3a; --card-bg-end:#0b1430;
+  --stroke:#1f2937; --stroke-2:#1f2a44;
+}
+
+/* ---------- Base ---------- */
+*{box-sizing:border-box;font-family:OpenDyslexic,system-ui,Segoe UI,Roboto,Arial,Helvetica,sans-serif}
+html,body{height:100%;min-height:100svh}
+body{margin:0;color:var(--fg);background:#0b1020;display:flex;flex-direction:column}
+a{color:var(--accent);text-decoration:none}
+.wrap{max-width:var(--max);margin:0 auto;padding:var(--pad)}
+.muted{color:var(--muted);font-size:.95rem}
+
+/* ---------- Header / Nav ---------- */
+header{background:var(--bg);border-bottom:1px solid var(--stroke);position:sticky;top:0;z-index:1000}
+header .wrap{max-width:100%;padding:0 var(--pad);position:relative}
+.row{display:flex;align-items:center;justify-content:center;gap:1rem;min-height:56px}
+#primary-nav{display:flex;align-items:center;gap:1rem;white-space:nowrap;flex-wrap:nowrap;max-width:var(--max);margin-left:0;margin-right:auto;justify-content:flex-start}
+#primary-nav .brand-link{display:inline-flex;align-items:center;gap:.55rem}
+#primary-nav .brand-logo{height:56px;width:auto;display:block;filter:drop-shadow(0 2px 6px rgba(0,0,0,.35))}
+#primary-nav .brand-link::after{content:"";display:block;height:3px;margin-top:.25rem;border-radius:999px;background:var(--accent);opacity:.9}
+#primary-nav .nav-links{display:flex;gap:1rem;align-items:stretch;flex:1;justify-content:center}
+#primary-nav .nav-links a{color:var(--muted);padding:.5rem .75rem;border-radius:.5rem;text-align:center;flex:1 1 auto}
+#primary-nav .nav-links a:hover,#primary-nav .nav-links a.active{background:var(--accent);color:#0b1020}
+
+/* Condense logic (unchanged) */
+.nav-toggle{display:none;flex-direction:column;align-items:center;justify-content:center;gap:4px;background:transparent;border:1px solid var(--accent);width:44px;height:38px;padding:6px;border-radius:.5rem;margin-right:.75rem}
+.nav-toggle .bar{width:24px;height:2px;background:var(--accent);border-radius:2px}
+.nav-toggle:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header.measuring #primary-nav{width:max-content;justify-content:flex-start}
+header.measuring #primary-nav .nav-links{gap:2rem}
+header.measuring #primary-nav .nav-links a{flex:0 0 auto}
+header.measuring .nav-toggle{display:none!important}
+header.nav-condense .nav-toggle{display:inline-flex}
+header.nav-condense #primary-nav .nav-links{display:none!important}
+header.nav-condense.nav-open #primary-nav .nav-links{
+  display:flex!important;flex-direction:column;gap:.25rem;position:absolute;left:0;right:0;top:100%;
+  background:var(--bg);padding:.5rem 0 .75rem;border-top:1px solid var(--stroke)
+}
+header.nav-condense.nav-open #primary-nav .nav-links a{
+  display:block;padding:.65rem .75rem;border-radius:.5rem;background:#0d1430;border:1px solid var(--stroke-2);color:var(--fg);flex:1 0 auto
+}
+@media (min-width:721px){.row{justify-content:center} .nav-toggle{display:none} header.nav-condense .nav-toggle{display:inline-flex}}
+@media (max-width:720px){#primary-nav .brand-logo{height:40px;max-width:70vw}}
+
+/* ---------- Main ---------- */
+main{flex:1 0 auto;max-width:var(--max);margin:0 auto;padding:2rem 1rem 3rem}
+
+/* ---------- Hero (index) ---------- */
+.hero{display:grid;gap:1rem;text-align:center;padding:2rem 1rem 1rem}
+.hero h1{margin:0;font-size:clamp(2rem,3vw + 1rem,3rem)}
+.hero p{color:var(--muted);margin:.25rem auto 0;max-width:60ch}
+
+/* ---------- Generic grids (index) ---------- */
+.grid,.announcements{display:grid;gap:1rem;grid-template-columns:repeat(3,1fr);margin-top:2rem}
+@media (max-width:900px){.grid,.announcements{grid-template-columns:1fr}}
+
+/* ---------- Cards (shared) ---------- */
+.card{
+  position:relative;overflow:hidden;min-height:160px;padding:1rem;border:1px solid var(--stroke-2);border-radius:.9rem;
+  background:linear-gradient(180deg,var(--card-bg-start),var(--card-bg-end));
+  display:flex;flex-direction:column;justify-content:space-between;
+  box-shadow:0 1px 0 rgba(255,255,255,.04) inset,0 12px 24px rgba(0,0,0,.25),0 6px 12px rgba(13,20,48,.45);
+  transition:transform .35s ease,box-shadow .35s ease,filter .35s ease;transform-style:preserve-3d
+}
+.card:hover{transform:translateY(-6px) rotateX(2deg) rotateY(2deg);box-shadow:0 1px 0 rgba(255,255,255,.05) inset,0 18px 36px rgba(0,0,0,.35),0 8px 18px rgba(13,20,48,.55);filter:saturate(1.05)}
+.card-title{margin:.25rem 0 .5rem;font-size:1.1rem;text-align:center}
+.card-body{margin:0 0 .75rem;color:var(--muted)}
+.card-link{font-weight:600}
+
+/* Index highlight overlays remain unchanged */
+.grid .card{background:none;min-height:200px;box-shadow:0 12px 24px rgba(0,0,0,.25)}
+.grid .card::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.45);z-index:0}
+.grid .card > *{position:relative;z-index:1}
+.grid .card .card-title,.grid .card .card-body,.grid .card .card-link{color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.6)}
+.grid .card .card-link:hover{color:var(--accent)}
+.card-content{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:1rem;background:inherit;transition:transform .5s cubic-bezier(.4,0,.2,1);will-change:transform}
+.card-content.outgoing{z-index:0}
+
+/* ---------- Blocks ---------- */
+.tile,.post,.project,.role{background:#0d1430;border:1px solid var(--stroke-2);border-radius:.8rem;padding:1rem}
+.post,.project,.role{margin:.75rem 0}
+
+/* ---------- Forms (global defaults kept for index) ---------- */
+form{display:grid;gap:.75rem;max-width:700px}
+input,textarea{width:100%;padding:.75rem;border-radius:.5rem;border:1px solid var(--stroke-2);background:#0d1430;color:#e5e7eb}
+button{padding:.75rem 1rem;border:0;border-radius:.5rem;background:var(--accent);color:#0b1020;font-weight:700}
+
+/* ---------- Footer ---------- */
+footer{border-top:1px solid var(--stroke);background:#0a0f1f;margin-top:auto;text-align:center}
+footer .wrap{max-width:var(--max);padding:1rem}
+footer .links{display:flex;flex-wrap:wrap;gap:.75rem 1rem;justify-content:center}
+footer a{color:var(--muted)} footer a:hover{color:var(--accent)}
+.fine{color:#6b7280;font-size:.9rem}
+
+/* ---------- A11y / Motion ---------- */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skip-link:focus{left:1rem;top:1rem;width:auto;height:auto;background:#0f172a;color:#e5e7eb;padding:.5rem .75rem;border-radius:.5rem;z-index:1000}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* ---------- 404 / misc ---------- */
+.nf-wrap{display:flex;align-items:center;justify-content:center;min-height:60vh;padding:2rem 1rem;text-align:center;gap:2rem;flex-wrap:wrap}
+.nf-copy{max-width:38rem}
+.nf-actions{margin-top:1rem;display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;padding:.65rem 1rem;border:1px solid #334155;border-radius:.75rem;text-decoration:none}
+.btn:hover{border-color:#64748b}
+.nf-mascot{width:320px;max-width:40vw}
+.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}
+
+/* ---------- CONTACT PAGE ONLY (scoped) ---------- */
+/* Container that wraps the form card + four info cards */
+.contact-grid{display:grid;gap:1rem;grid-template-columns:repeat(4,minmax(0,1fr));align-items:stretch}
+.contact-form-card{grid-column:1 / -1;padding:1.25rem 1.5rem;display:flex;flex-direction:column}
+.contact-form-card form{flex:1;width:100%;max-width:none!important;margin:0;display:flex;flex-direction:column;gap:1rem}
+.contact-form-card label{display:flex;flex-direction:column;font-weight:600}
+.contact-form-card input[type="text"],.contact-form-card input[type="email"],.contact-form-card textarea{
+  width:100%;margin-top:.35rem;padding:1rem 1.1rem;border:1px solid var(--stroke-2);background:#0d1430;color:var(--fg);border-radius:.6rem;font-size:1rem
+}
+.contact-form-card textarea{min-height:14rem;resize:vertical}
+.contact-form-card input:focus,.contact-form-card textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 28%,transparent)}
+.contact-form-card button{width:100%;padding:1rem;margin-top:1rem;border:0;border-radius:.6rem;background:var(--accent);color:#0b1020;font-weight:700;cursor:pointer;font-size:1rem}
+.info-card{display:flex;flex-direction:column;justify-content:flex-start;padding:1rem}
+.info-card .card-title{font-size:1rem;margin:.25rem 0 .4rem;text-align:left}
+.contact-list{list-style:none;margin:0;padding:0}
+.contact-list li{display:flex;align-items:center;gap:.5rem;margin:.35rem 0;font-size:.92rem}
+.contact-list svg{width:16px;height:16px;stroke:var(--accent);stroke-width:2;fill:none;flex-shrink:0}
+.info-card a{text-decoration:underline}
+
+/* Responsive wrap for contact cards only */
+@media (max-width:1100px){.contact-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:640px){.contact-grid{grid-template-columns:1fr}}

@@ -1,0 +1,9 @@
+services:
+  website:
+    image: httpd:2.4.65
+    container_name: baysoftware.dev
+    ports:
+      - "8080:80"
+    volumes:
+      - ./docs:/usr/local/apache2/htdocs/
+    restart: unless-stopped
