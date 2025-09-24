@@ -1,21 +1,19 @@
+// js/app.js  (swipe-away preserved, boxes change at random times; no CSS added)
+
 // -------- Data --------
 const allAnnouncements = [
-  {
-    title: "New OSS Release",
-    body: "We shipped v1.2 of Ledgernaut—now with faster sync.",
-    href: "/pages/open-source.html"
-  },
-  { title: "Bug Bash Friday", body: "Community triage session this Friday @ 2pm CT.", href: "/pages/blog.html" },
-  {title: "Security Update", body: "Important patch for OAuth proxy—review our notes.", href: "/pages/blog.html"},
-  { title: "Solutions", body: "Cloud-native platforms, data pipelines, and secure APIs built on proven OSS.", href: "/pages/services.html" },
-  { title: "Open Source", body: "We maintain libraries and contribute upstream. Sustainability matters.", href: "/pages/open-source.html" },
-  { title: "Work With Us", body: "Join a team that ships and shares. Remote-friendly, impact-driven.", href: "/pages/careers.html" },
-  { title: "Hiring Maintainers", body: "Paid part-time roles for OSS maintainers.", href: "/pages/careers.html" },
-  { title: "Client Spotlight", body: "Open standards integration for a fintech leader.", href: "/pages/services.html" },
-  { title: "RFP Window", body: "Seeking partners for healthcare data pipelines.", href: "/pages/contact.html" },
-  { title: "Sponsor Us", body: "Back our work to keep core libraries sustainable.", href: "/pages/open-source.html" },
-  { title: "Docs Refresh", body: "Improved developer guides & API examples.", href: "/pages/blog.html" },
-  {title: "Meetup", body: "Phoenix OSS meetup—cohosted with local devs.", href: "/pages/blog.html"},
+  { title: "New OSS Release", body: "We shipped v1.2 of Ledgernaut—now with faster sync.", href: "pages/open-source.html" },
+  { title: "Bug Bash Friday", body: "Community triage session this Friday @ 2pm CT.", href: "pages/blog.html" },
+  { title: "Security Update", body: "Important patch for OAuth proxy—review our notes.", href: "pages/blog.html" },
+  { title: "Solutions", body: "Cloud-native platforms, data pipelines, and secure APIs built on proven OSS.", href: "pages/services.html" },
+  { title: "Open Source", body: "We maintain libraries and contribute upstream. Sustainability matters.", href: "pages/open-source.html" },
+  { title: "Work With Us", body: "Join a team that ships and shares. Remote-friendly, impact-driven.", href: "pages/careers.html" },
+  { title: "Hiring Maintainers", body: "Paid part-time roles for OSS maintainers.", href: "pages/careers.html" },
+  { title: "Client Spotlight", body: "Open standards integration for a fintech leader.", href: "pages/services.html" },
+  { title: "RFP Window", body: "Seeking partners for healthcare data pipelines.", href: "pages/contact.html" },
+  { title: "Sponsor Us", body: "Back our work to keep core libraries sustainable.", href: "pages/open-source.html" },
+  { title: "Docs Refresh", body: "Improved developer guides & API examples.", href: "pages/blog.html" },
+  { title: "Meetup", body: "Phoenix OSS meetup—cohosted with local devs.", href: "pages/blog.html" },
 ];
 
 const highlightImages = [
@@ -31,106 +29,109 @@ const highlightImages = [
 ];
 
 // -------- Utils --------
-const pickRandom = (source, n) => [...source].sort(() => Math.random() - 0.5).slice(0, n);
-
-const renderCardContent = (ann) => `
+const pickRandom = (src, n) => [...src].sort(() => Math.random() - 0.5).slice(0, n);
+const rnd = (min, max) => Math.floor(min + Math.random() * (max - min));
+const cardHTML = (ann) => `
   <h3 class="card-title">${ann.title}</h3>
   <p class="card-body">${ann.body}</p>
   ${ann.href ? `<a class="card-link" href="${ann.href}">Learn more →</a>` : ""}
 `;
 
-// -------- Layout includes --------
+// -------- Layout includes (relative) --------
 async function inject(url, targetSelector) {
   const target = document.querySelector(targetSelector);
   if (!target) return;
   try {
     const res = await fetch(url, { cache: "no-cache" });
-    if (!res.ok) throw new Error(`Failed to load ${url}`);
+    if (!res.ok) throw new Error();
     target.innerHTML = await res.text();
-  } catch (e) {
-    /* no-op in prod */
-  }
+  } catch {}
 }
 
 async function loadLayout() {
-  const headerUrl = document.querySelector('#site-header')?.getAttribute('data-include') || '/partials/header.html';
-  const footerUrl = document.querySelector('#site-footer')?.getAttribute('data-include') || '/partials/footer.html';
-  await Promise.all([
-    inject(headerUrl, '#site-header'),
-    inject(footerUrl, '#site-footer'),
-  ]);
+  const headerUrl = document.querySelector('#site-header')?.getAttribute('data-include') || 'partials/header.html';
+  const footerUrl = document.querySelector('#site-footer')?.getAttribute('data-include') || 'partials/footer.html';
+  await Promise.all([inject(headerUrl, '#site-header'), inject(footerUrl, '#site-footer')]);
 }
 
 // -------- Highlights --------
 let highlightAnnouncements = pickRandom(allAnnouncements, 3);
 
-const renderHighlights = () => {
+function renderHighlights() {
   const images = pickRandom(highlightImages, 3);
   document.querySelectorAll("[data-highlight-slot]").forEach((slot, i) => {
     const img = images[i % images.length];
     slot.style.backgroundImage = `url(${img})`;
     slot.style.backgroundSize = "cover";
     slot.style.backgroundPosition = "center";
-    slot.style.color = "#fff";
-    if (highlightAnnouncements[i]) slot.innerHTML = renderCardContent(highlightAnnouncements[i]);
+    if (highlightAnnouncements[i]) slot.innerHTML = cardHTML(highlightAnnouncements[i]);
   });
-};
+}
 
 setInterval(() => {
   highlightAnnouncements = pickRandom(allAnnouncements, 3);
   renderHighlights();
 }, 30 * 60 * 1000);
 
-const rotateAnnouncementsGroup = (intervalMs = 6000, slideMs = 500) => {
+// -------- Announcements: independent, random timing, swipe-away --------
+function rotateAnnouncementsGroup(baseMs = 6000, slideMs = 500) {
   const slots = document.querySelectorAll("[data-announcement-slot]");
   if (!slots.length) return;
 
   const pool = allAnnouncements.filter(a => !highlightAnnouncements.includes(a));
-  let start = 0;
+  if (!pool.length) return;
 
-  // Initial render
-  slots.forEach((slot, i) => {
-    slot.innerHTML = `<div class="card-content" style="transform:translateX(0);">${renderCardContent(pool[(start + i) % pool.length])}</div>`;
-  });
+  const pickOne = () => pool[Math.floor(Math.random() * pool.length)];
+  const nextDelay = () => Math.round(baseMs * (0.75 + Math.random() * 0.5)); // 0.75x–1.25x
 
-  setInterval(() => {
-    slots.forEach((slot, i) => {
-      const oldContent = slot.querySelector(".card-content");
-      const nextIdx = (start + i + slots.length) % pool.length;
-      const newContent = document.createElement("div");
-      newContent.className = "card-content";
-      newContent.style.transform = "translateX(-100%)";
-      newContent.innerHTML = renderCardContent(pool[nextIdx]);
-      slot.appendChild(newContent);
+  slots.forEach((slot) => {
+    // initial content
+    const first = document.createElement("div");
+    first.className = "card-content";
+    first.style.transform = "translateX(0)";
+    first.innerHTML = cardHTML(pickOne());
+    slot.innerHTML = "";
+    slot.appendChild(first);
 
-      void newContent.offsetWidth; // reflow
-      newContent.style.transform = "translateX(0)";
-      if (oldContent) {
-        oldContent.classList.add("outgoing");
-        oldContent.style.transform = "translateX(100%)";
-        setTimeout(() => oldContent.remove(), slideMs);
+    const tick = () => {
+      const oldEl = slot.querySelector(".card-content");
+      const incoming = document.createElement("div");
+      incoming.className = "card-content";
+      incoming.style.transform = "translateX(-100%)"; // start off-screen left
+      incoming.innerHTML = cardHTML(pickOne());
+      slot.appendChild(incoming);
+
+      // force reflow then animate
+      void incoming.offsetWidth;
+      incoming.style.transform = "translateX(0)";
+      if (oldEl) {
+        oldEl.style.transform = "translateX(100%)"; // swipe away right (same as before)
+        setTimeout(() => oldEl.remove(), slideMs);
       }
-    });
-    start = (start + slots.length) % pool.length;
-  }, intervalMs);
-};
+
+      setTimeout(tick, nextDelay());
+    };
+
+    // stagger starts so they don't move together
+    setTimeout(tick, rnd(0, baseMs));
+  });
+}
 
 // -------- Nav + Footer --------
-const setActiveNav = () => {
+function setActiveNav() {
   const currentPage = location.pathname.split("/").pop() || "index.html";
   document.querySelectorAll("header nav a").forEach(a => {
     const href = a.getAttribute("href") || "";
     if (href.endsWith(currentPage)) a.classList.add("active");
     if (currentPage === "index.html" && (href === "/" || href.endsWith("/index.html"))) a.classList.add("active");
   });
-};
+}
 
-const setYear = () => {
+function setYear() {
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = "" + new Date().getFullYear();
-};
+}
 
-// Toggle dropdown on hamburger
 function wireHamburger(){
   const header=document.querySelector('header');
   const btn=header?.querySelector('.nav-toggle');
@@ -146,44 +147,24 @@ function wireHamburger(){
   }));
 }
 
-/* ---------- NEW: condense nav when brand+links don't fit one line ----------
-   Assumes header markup:
-   <nav id="primary-nav">
-     <a class="brand-link">...</a>
-     <div class="nav-links"> <a>Home</a> ... </div>
-   </nav>
-
-   Behavior:
-   - When condensed, header gets .nav-condense. Hamburger shows, .nav-links hide.
-   - When expanded, hamburger hides, .nav-links flow inline next to brand.
---------------------------------------------------------------------------- */
 function updateNavCondense(){
   const header = document.querySelector('header');
   const row = header?.querySelector('.row');
   const nav = header?.querySelector('#primary-nav');
   if (!header || !row || !nav) return;
 
-  // snapshot current state
-  const wasCondensed = header.classList.contains('nav-condense');
   const wasOpen = header.classList.contains('nav-open');
-
-  // Enter measuring mode: intrinsic widths, no hamburger
   header.classList.add('measuring');
-  header.classList.remove('nav-condense', 'nav-open'); // ensure inline layout
-  // Force a reflow so styles apply before measuring
+  header.classList.remove('nav-condense','nav-open');
   void nav.offsetWidth;
 
-  // Compute needed vs available
-  const needed = Math.ceil(nav.scrollWidth);          // intrinsic width of [brand + links]
-  const avail  = Math.max(0, Math.floor(row.clientWidth - 24)); // small gutter
-
+  const needed = Math.ceil(nav.scrollWidth);
+  const avail  = Math.max(0, Math.floor(row.clientWidth - 24));
   const condense = needed > avail;
 
-  // Exit measuring mode and set final state
   header.classList.remove('measuring');
   header.classList.toggle('nav-condense', condense);
 
-  // Close dropdown if returning to full inline
   if (!condense && wasOpen) {
     header.classList.remove('nav-open');
     const btn = header.querySelector('.nav-toggle');
@@ -191,56 +172,20 @@ function updateNavCondense(){
   }
 }
 
-
 function wireNavCondense() {
-  // run now and after layout shifts
   updateNavCondense();
-  window.addEventListener('resize', updateNavCondense, {passive: true});
-  // fonts/images can shift metrics
+  window.addEventListener('resize', updateNavCondense, {passive:true});
   setTimeout(updateNavCondense, 100);
   setTimeout(updateNavCondense, 500);
 }
 
-// --- Boot ---
+// ---- Boot ----
 document.addEventListener("DOMContentLoaded", async () => {
-  await loadLayout();            // inject header/footer
-  wireHamburger();               // hook hamburger behavior
-  wireNavCondense();             // compute condensed vs full
+  await loadLayout();
+  wireHamburger();
+  wireNavCondense();
   setActiveNav();
   setYear();
   renderHighlights();
-  rotateAnnouncementsGroup();
-});
-/* ---- DEV: Under Construction redirect ---- */
-const UC = (() => {
-  // hard-coded array of paths to block in dev
-  const PAGES = [
-    '/pages/services.html',
-    '/pages/blog.html',
-    '/pages/privacy.html',
-    '/pages/terms.html',
-    '/pages/open-source.html',
-    // add more relative paths here
-  ];
-
-  const isDevHost = () => ['localhost','127.0.0.1','::1'].includes(location.hostname);
-  const urlDev = () => new URLSearchParams(location.search).get('dev') === '1';
-  const isDev = () => isDevHost() || urlDev() || localStorage.getItem('devMode') === '1';
-
-  function maybeRedirect(){
-    if (!isDev()) return;
-    if (!PAGES.includes(location.pathname)) return;
-    if (location.pathname === '/under-construction.html') return;
-
-    const next = `/under-construction.html?from=${encodeURIComponent(location.pathname + location.search)}`;
-    location.replace(next);
-  }
-
-  return { maybeRedirect };
-})();
-
-/* --- Boot --- */
-document.addEventListener("DOMContentLoaded", async () => {
-  // your existing boot code here …
-  UC.maybeRedirect();
+  rotateAnnouncementsGroup(6000, 500);
 });
