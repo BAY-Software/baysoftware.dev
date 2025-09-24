@@ -1,0 +1,11 @@
+services:
+  website:
+    image: nginx:latest
+    ports:
+      - "8080:80"
+    volumes:
+      - ./:/usr/share/nginx/html
+    networks:
+        - default
+networks:
+  default:
