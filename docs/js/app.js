@@ -81,39 +81,65 @@ setInterval(() => {
   renderHighlights();
 }, 30 * 60 * 1000);
 
+// Replace your existing rotateAnnouncementsGroup with this:
 const rotateAnnouncementsGroup = (intervalMs = 6000, slideMs = 500) => {
   const slots = document.querySelectorAll("[data-announcement-slot]");
   if (!slots.length) return;
 
+  // Exclude current highlights from the pool
   const pool = allAnnouncements.filter(a => !highlightAnnouncements.includes(a));
-  let start = 0;
 
-  // Initial render
+  // Track the current announcement in each slot
+  const current = new Array(slots.length).fill(null);
+
+  const renderRandomFor = (slotIdx) => {
+    const slot = slots[slotIdx];
+    const oldContent = slot.querySelector(".card-content");
+
+    // Pick a random announcement not currently in this slot
+    let next;
+    do {
+      next = pool[Math.floor(Math.random() * pool.length)];
+    } while (next === current[slotIdx] && pool.length > 1);
+
+    current[slotIdx] = next;
+
+    const newContent = document.createElement("div");
+    newContent.className = "card-content";
+    newContent.style.transform = "translateX(-100%)";
+    newContent.innerHTML = renderCardContent(next);
+    slot.appendChild(newContent);
+
+    // Animate in
+    void newContent.offsetWidth;
+    newContent.style.transform = "translateX(0)";
+    if (oldContent) {
+      oldContent.classList.add("outgoing");
+      oldContent.style.transform = "translateX(100%)";
+      setTimeout(() => oldContent.remove(), slideMs);
+    }
+  };
+
+  // Initial fill
   slots.forEach((slot, i) => {
-    slot.innerHTML = `<div class="card-content" style="transform:translateX(0);">${renderCardContent(pool[(start + i) % pool.length])}</div>`;
+    const ann = pool[Math.floor(Math.random() * pool.length)];
+    current[i] = ann;
+    slot.innerHTML = `<div class="card-content" style="transform:translateX(0);">
+      ${renderCardContent(ann)}
+    </div>`;
   });
 
-  setInterval(() => {
-    slots.forEach((slot, i) => {
-      const oldContent = slot.querySelector(".card-content");
-      const nextIdx = (start + i + slots.length) % pool.length;
-      const newContent = document.createElement("div");
-      newContent.className = "card-content";
-      newContent.style.transform = "translateX(-100%)";
-      newContent.innerHTML = renderCardContent(pool[nextIdx]);
-      slot.appendChild(newContent);
-
-      void newContent.offsetWidth; // reflow
-      newContent.style.transform = "translateX(0)";
-      if (oldContent) {
-        oldContent.classList.add("outgoing");
-        oldContent.style.transform = "translateX(100%)";
-        setTimeout(() => oldContent.remove(), slideMs);
-      }
-    });
-    start = (start + slots.length) % pool.length;
-  }, intervalMs);
+  // Each slot rotates independently at a random interval
+  slots.forEach((_, slotIdx) => {
+    const randomDelay = () => intervalMs + Math.floor(Math.random() * intervalMs);
+    const rotate = () => {
+      renderRandomFor(slotIdx);
+      setTimeout(rotate, randomDelay());
+    };
+    setTimeout(rotate, randomDelay());
+  });
 };
+
 
 // -------- Nav + Footer --------
 const setActiveNav = () => {
